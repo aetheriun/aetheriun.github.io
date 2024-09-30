@@ -361,45 +361,124 @@ li a:hover {
 /* WORK PAGE CONTENT */
 
 .work-main {
-
+  display: flex;
+  width: 80%;
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-column-gap: 34px;
+  grid-row-gap: 34px;
 }
 
 .work-header {
-
+display: flex;
+width: 80%;
+justify-content: space-between;
 }
 
 .work-title {
+  width: 66%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-family: "Rubik";
+  font-size: 3.0rem;
+  font-weight: 600;
+  color: #403f4c;
+  text-align: center;
 
 }
 
 .work-header-linkbox {
-
+  width:33%;
+  display: flex;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-column-gap: 0%;
+  grid-row-gap: 0%;
 }
 
 .work-header-link {
-
+  display: flex;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  align-items: center;
+  grid-column-gap: 0%;
+  grid-row-gap: 0%;
+  background-color: #3180f6;
+  box-shadow: 12px 12px 0 0 #f3d65c;
 }
 
 .work-header-link-img {
-
+  width: 50px;
 }
 
 .work-content {
-
+  display: flex;
+  justify-content: space-between;
 }
 
 .work-heroimage {
+  width: 49%;
+  align-self: center;
+  order: 0;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  box-shadow: 10px 10px 0 0 #f3d65c;
 
 }
 
 .work-description {
+  width: 49%;
+  height: 100%;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  align-self: auto;
+  background-color: #f3d65c;
+  box-shadow: 12px 12px 0 0 #3180f6;
+  font-family: Ubuntu Mono;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
 
 }
 
 .work-image-containter {
-
+  display: flex;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
 .work-image {
-  
+  width: 48%;
+  box-shadow: 15px 15px 0 0 #3180f6;
+
 }
