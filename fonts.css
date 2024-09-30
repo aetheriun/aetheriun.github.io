@@ -1,0 +1,45 @@
+/* FONT SETTINGS */
+.ubuntu-mono-regular {
+    font-family: "Ubuntu Mono", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .ubuntu-mono-bold {
+    font-family: "Ubuntu Mono", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  .ubuntu-mono-regular-italic {
+    font-family: "Ubuntu Mono", system-ui;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .ubuntu-mono-bold-italic {
+    font-family: "Ubuntu Mono", system-ui;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .rubik-regular {
+    font-family: "Rubik", system-ui;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: normal;
+  }
+  .rubik-bold {
+    font-family: "Rubik", system-ui;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: normal;
+  }
+  .rubik-italic {
+    font-family: "Rubik", system-ui;
+    font-optical-sizing: auto;
+    font-weight:400;
+    font-style: italic;
+  }
+  .rubik-bold-italic {
+    font-family: "Rubik", system-ui;
+    font-optical-sizing: auto;
+    font-weight:700;
+    font-style: italic;
+  }
