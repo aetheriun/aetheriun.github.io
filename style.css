@@ -1,4 +1,4 @@
-/* STYLING */
+/* DEFAULT / BASIC STYLING */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -23,6 +23,8 @@ video {
   height: auto;
   max-width: 100%;
 }
+
+/* FOOTER STYLING */
 
 footer {
   display: none;
@@ -61,6 +63,7 @@ header {
 
 .page-logo-link:current {
   width: 100%;
+  transition: transform 0.1s;
 }
 
 .page-logo-text {
@@ -71,6 +74,7 @@ header {
   color: #3183fa;
   text-decoration: none;
   text-shadow: 0.3125rem 0.3125rem #f7da5c;
+  transition: text-shadow 0.1s;
 }
 
 .page-logo-text:hover {
@@ -91,6 +95,7 @@ ul {
 
 li {
   display: inline-block;
+  transition: transform 0.1s;
 }
 
 nav {
@@ -119,6 +124,7 @@ nav {
   font-size: 22px;
   font-weight: 400;
   text-decoration: none;
+  transition: box-shadow 0.1s;
 }
 
 .navbar-item-active {
@@ -135,6 +141,7 @@ nav {
   font-weight: 400;
   text-align: right;
   text-decoration: none;
+  transition: box-shadow 0.1s;
 }
 
 li:hover {
@@ -143,6 +150,13 @@ li:hover {
 
 li a:hover {
   box-shadow: none;
+}
+
+li a.navbar-item:active {
+  box-shadow: none;
+  background-color: #3183fa;
+  color: #f7da5c;
+  transform: translate(5px, 5px);
 }
 
 /* INDEX PAGE MAIN CONTENT STLYING */
@@ -192,10 +206,12 @@ li a:hover {
 
 .project-main .project-div:nth-of-type(odd) .project-link .project-img {
   box-shadow: 20px 20px #3182f9;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .project-main .project-div:nth-of-type(even) .project-link .project-img {
   box-shadow: 20px 20px #f6d95c;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .project-main .project-div .project-link .project-img:hover {
@@ -247,19 +263,23 @@ li a:hover {
 
 .experiments-main .experiments-div:nth-of-type(4n+1) .experiments-link .experiments-img {
   box-shadow: 12px 12px 0 0 #3182f9;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 .experiments-main .experiments-div:nth-of-type(4n+2) .experiments-link .experiments-img {
   box-shadow: 12px 12px 0 0 #f6d95c;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 .experiments-main .experiments-div:nth-of-type(4n+3) .experiments-link .experiments-img {
   box-shadow: 12px 12px 0 0 #f6d95c;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 .experiments-main .experiments-div:nth-of-type(4n+4) .experiments-link .experiments-img {
   box-shadow: 12px 12px 0 0 #3182f9;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .experiments-main .experiments-div .experiments-link .experiments-img:hover {
-  transform: translate(20px, 20px);
+  transform: translate(12px, 12px);
   box-shadow: none;
 }
 
@@ -316,6 +336,7 @@ li a:hover {
   font-size: 22px;
   line-height: 25px;
   text-align: center;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .about-link-box {
@@ -332,6 +353,7 @@ li a:hover {
   grid-row-gap: 30px;
   background-color: #3182f9;
   box-shadow: 12px 12px 0 0 #f2d55c;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .about-link {
@@ -343,6 +365,7 @@ li a:hover {
   width: 50%;
   box-shadow: 0.625rem 0.625rem 0 0 #3182f9;
   object-fit: cover;
+  transition: box-shadow 0.1s, transform 0.1s;
 }
 
 .about-img:hover {
@@ -476,5 +499,5 @@ justify-content: space-between;
 
 .work-image {
   width: 48%;
-  box-shadow: 15px 15px 0 0 #3180f6;\
+  box-shadow: 15px 15px 0 0 #3180f6;
 }
