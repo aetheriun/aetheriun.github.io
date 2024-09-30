@@ -391,7 +391,6 @@ justify-content: space-between;
   font-weight: 600;
   color: #403f4c;
   text-align: center;
-
 }
 
 .work-header-linkbox {
@@ -442,7 +441,6 @@ justify-content: space-between;
   flex-shrink: 1;
   flex-basis: auto;
   box-shadow: 10px 10px 0 0 #f3d65c;
-
 }
 
 .work-description {
@@ -460,7 +458,6 @@ justify-content: space-between;
   line-height: 20px;
   font-weight: 400;
   text-align: center;
-
 }
 
 .work-image-containter {
@@ -479,6 +476,5 @@ justify-content: space-between;
 
 .work-image {
   width: 48%;
-  box-shadow: 15px 15px 0 0 #3180f6;
-
+  box-shadow: 15px 15px 0 0 #3180f6;\
 }
