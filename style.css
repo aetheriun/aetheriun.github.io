@@ -16,7 +16,16 @@ body {
   font-family: "Ubuntu Mono", system-ui;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+body.body-main {
   background-color: #ffcce3;
+}
+body.body-project {
+  background-color: #C9DDFF;
+}
+body.body-experiment {
+  background-color: #FFF4C9;
 }
 
 img,
@@ -39,17 +48,16 @@ footer {
 
 header {
   display: flex;
-  max-width: 90%;
+  width: 100%;
+  max-width: 100%;
   margin-top: 0px;
   margin-right: auto;
-  margin-bottom: 0px;
+  margin-bottom: 1.5rem;
   margin-left: auto;
 
   position: sticky;
   top: 0px;
   z-index: 999;
-  width: 80%;
-  max-width: 80%;
   justify-content: space-around;
   align-items: center;
   grid-column-gap: 0px;
@@ -455,11 +463,12 @@ justify-content: space-between;
 .work-content {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
 }
 
 .work-heroimage {
   width: 49%;
-  align-self: center;
   order: 0;
   flex-grow: 0;
   flex-shrink: 1;
@@ -474,7 +483,6 @@ justify-content: space-between;
   padding-right: 15px;
   padding-bottom: 15px;
   padding-left: 15px;
-  align-self: auto;
   background-color: #f3d65c;
   box-shadow: 12px 12px 0 0 #3180f6;
   font-family: Ubuntu Mono;
