@@ -16,8 +16,9 @@ body {
   font-family: "Ubuntu Mono", system-ui;
   font-size: 1.25rem;
   line-height: 1.5;
+  background-color: #ffcce3;
 }
-
+/*
 body.body-main {
   background-color: #ffcce3;
 }
@@ -26,7 +27,7 @@ body.body-project {
 }
 body.body-experiment {
   background-color: #FFF4C9;
-}
+} */
 
 img,
 video {
@@ -161,7 +162,7 @@ li a:hover {
   box-shadow: none;
 }
 
-li a.navbar-item:active {
+li a.navbar-item:active, i a.navbar-item:focus {
   box-shadow: none;
   background-color: #3183fa;
   color: #f7da5c;
