@@ -511,3 +511,30 @@ justify-content: space-between;
   width: 48%;
   box-shadow: 15px 15px 0 0 #3180f6;
 }
+
+@media screen and (max-width : 990px) {
+  header {
+    flex-direction: column;
+  }
+
+  .page-logo-text {
+    text-align: center;
+  }
+
+  .about-main {
+    flex-direction: column;
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .about-content {
+    width: 90%;
+    max-width: 90%;
+    align-items: center;
+  }
+
+  .about-img {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
