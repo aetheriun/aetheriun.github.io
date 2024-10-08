@@ -447,19 +447,26 @@ i a.navbar-item:focus {
   width: 30%;
   transition: box-shadow 0.15s, transform 0.15s;
 }
+.work-image-portrait {
+  width: 45%;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
 
-.work-image:nth-of-type(odd) {
+.work-image:nth-of-type(odd),
+.work-image-portrait:nth-of-type(odd) {
   box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
 }
 
-.work-image:nth-of-type(even) {
+.work-image:nth-of-type(even),
+.work-image-portrait:nth-of-type(even) {
   box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
 }
 
 .work-header-linkbox:hover,
 .work-heroimage:hover,
 .work-description:hover,
-.work-image:hover {
+.work-image:hover,
+.work-image-portrait:hover {
   transform: translate(1.0rem, 1.0rem);
   box-shadow: none;
 }
@@ -727,18 +734,25 @@ i a.navbar-item:focus {
     width: 100%;
   }
 
-  .work-image:nth-of-type(odd) {
+  .work-image-portrait {
+    width: 100%;
+  }
+
+  .work-image:nth-of-type(odd),
+  .work-image-portrait:nth-of-type(odd) {
     box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
   }
 
-  .work-image:nth-of-type(even) {
+  .work-image:nth-of-type(even),
+  .work-image-portrait:nth-of-type(even) {
     box-shadow: 0.5rem 0.5rem 0 0 #f3d65c;
   }
 
   .work-header-linkbox:hover,
   .work-heroimage:hover,
   .work-description:hover,
-  .work-image:hover {
+  .work-image:hover,
+  .work-image-portrait:hover  {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: none;
   }
