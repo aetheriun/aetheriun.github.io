@@ -14,6 +14,7 @@ body {
   margin: 1.125rem;
   margin-top: 0;
   font-family: "Ubuntu Mono", system-ui;
+  color: #403F4C;
   font-size: 1.25rem;
   line-height: 1.5;
   background-color: #ffcce3;
@@ -39,11 +40,7 @@ video {
 /* FOOTER STYLING */
 
 footer {
-  display: none;
-  justify-content: space-between;
-  flex-flow: row nowrap;
-  margin-top: 1.0rem;
-  margin-bottom: 0;
+  height: 1.0rem;
 }
 
 /* HEADER STYLING */
@@ -70,8 +67,7 @@ header {
   text-decoration: none;
 }
 
-.page-logo-link:current {
-  width: 100%;
+.page-logo-link:hover {
   transition: transform 0.15s;
 }
 
@@ -368,13 +364,15 @@ i a.navbar-item:focus {
   justify-content: flex-start;
   flex-wrap: nowrap;
   align-items: center;
-  grid-column-gap: 2.0rem;
   grid-row-gap: 2.0rem;
+  grid-column-gap: 2.0rem;
 }
 
 .work-header {
   display: flex;
   flex-direction: column;
+  margin-top: 1.0rem;
+  margin-bottom: -1.0rem;
   width: 100%;
   align-items: center;
   grid-row-gap: 0.5rem;
@@ -385,38 +383,11 @@ i a.navbar-item:focus {
   margin-top: 0px;
   margin-bottom: 0px;
   font-family: "Rubik";
-  font-size: 4.0rem;
+  font-size: 5.0rem;
   font-weight: 600;
-  color: #403f4c;
+  line-height: 5.0rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-.work-header-linkbox {
-  display: flex;
-  padding: 1.0rem;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: nowrap;
-  align-items: center;
-  grid-column-gap: 0%;
-  grid-row-gap: 0%;
-  background-color: #3180f6;
-  box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
-  grid-column-gap: 2.0rem;
-  transition: box-shadow 0.15s, transform 0.15s;
-}
-
-.work-header-link {
-  display: flex;
-  padding: 0;
-  align-items: center;
-  grid-column-gap: 0%;
-  grid-row-gap: 0%;
-}
-
-.work-header-link-img {
-  width: 4.0rem;
 }
 
 .work-content {
@@ -426,6 +397,8 @@ i a.navbar-item:focus {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  grid-column-gap: 2.0rem;
+  grid-row-gap: 2.0rem;
 }
 
 .work-heroimage {
@@ -438,7 +411,7 @@ i a.navbar-item:focus {
 .work-description {
   width: 100%;
   height: 100%;
-  margin-top: 2.0rem;
+  margin: 1.0rem 0.0rem;
   padding: 1.0rem;
   background-color: #f3d65c;
   box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
@@ -448,6 +421,11 @@ i a.navbar-item:focus {
   font-weight: 400;
   text-align: center;
   transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.work-link {
+  color: #3180f6;
+  font-size: 1.5rem;
 }
 
 .work-image-containter {
@@ -461,16 +439,20 @@ i a.navbar-item:focus {
   grid-row-gap: 2.0rem;
 }
 
+.work-link-break {
+  display: none;
+}
+
 .work-image {
   width: 30%;
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
-.work-image:nth-of-type(even) {
+.work-image:nth-of-type(odd) {
   box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
 }
 
-.work-image:nth-of-type(odd) {
+.work-image:nth-of-type(even) {
   box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
 }
 
@@ -567,12 +549,28 @@ i a.navbar-item:focus {
 
   /* WORKS STYLING */
 
+  .work-title {
+    font-size: 4.0rem;
+  }
+
+  .work-content {
+    width: 100%;
+  }
+
   .work-description {
     margin-bottom: 0rem;
   }
 
   .work-image {
     width: 47%;
+  }
+
+  .work-image-containter {
+    width: 100%;
+  }
+
+  .work-link-break {
+    display: inline;
   }
 
   .work-image:nth-of-type(4n+1),
@@ -697,18 +695,9 @@ i a.navbar-item:focus {
     grid-row-gap: 1.5rem;
   }
 
-  .work-header-linkbox {
-    box-shadow: 0.5rem 0.5rem 0 0 #f3d65c;
-    padding: 0.75rem;
-    grid-column-gap: 1.5rem;
-  }
-
-  .work-header-link-img {
-    width: 2.5rem;
-  }
-
   .work-title {
     font-size: 2.25rem;
+    line-height: 2.25rem;;
   }
 
   .work-heroimage {
@@ -723,6 +712,11 @@ i a.navbar-item:focus {
     margin-bottom: 0rem;
   }
 
+  .work-link {
+    color: #3180f6;
+    font-size: 1.0rem;
+  }
+
   .work-image-containter {
     flex-direction: column;
     grid-column-gap: 1.5rem;
@@ -733,11 +727,11 @@ i a.navbar-item:focus {
     width: 100%;
   }
 
-  .work-image:nth-of-type(even) {
+  .work-image:nth-of-type(odd) {
     box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
   }
 
-  .work-image:nth-of-type(odd) {
+  .work-image:nth-of-type(even) {
     box-shadow: 0.5rem 0.5rem 0 0 #f3d65c;
   }
 
