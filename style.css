@@ -207,7 +207,7 @@ i a.navbar-item:focus {
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
-.project-main .project-div .project-link .project-img:hover {
+.project-main .project-div:hover .project-link .project-img {
   transform: translate(20px, 20px);
   box-shadow: none;
 }
@@ -266,7 +266,7 @@ i a.navbar-item:focus {
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
-.experiments-main .experiments-div .experiments-link .experiments-img:hover {
+.experiments-main .experiments-div:hover .experiments-link .experiments-img {
   transform: translate(12px, 12px);
   box-shadow: none;
 }
@@ -411,7 +411,7 @@ i a.navbar-item:focus {
 .work-description {
   width: 100%;
   height: 100%;
-  margin: 1.0rem 0.0rem;
+  margin: 0.0rem;
   padding: 1.0rem;
   background-color: #f3d65c;
   box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
@@ -711,12 +711,15 @@ i a.navbar-item:focus {
     box-shadow: 0.5rem 0.5rem 0 0 #f3d65c;
   }
 
+  .work-content {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+  }
+
   .work-description {
     font-size: 0.8rem;
     line-height: 0.8rem;
     box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
-    margin-top: 1.5rem;
-    margin-bottom: 0rem;
   }
 
   .work-link {
