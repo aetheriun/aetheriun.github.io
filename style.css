@@ -188,6 +188,7 @@ i a.navbar-item:focus {
 .project-link {
   width: 100%;
   height: 100%;
+  text-decoration: none;
 }
 
 .project-img {
@@ -211,6 +212,10 @@ i a.navbar-item:focus {
   transform: translate(20px, 20px);
   box-shadow: none;
 }
+.project-main .project-div:hover .project-overlay {
+  transform: translate(20px, 20px);
+  opacity: 1;
+}
 
 /* EXPERIMENTS PAGE MAIN CONTENT STLYING */
 .experiments-main {
@@ -218,6 +223,7 @@ i a.navbar-item:focus {
   width: 100%;
   height: 100%;
   max-width: none;
+  margin-top: 1.0rem;
   margin-bottom: 1.0rem;
   margin-left: auto;
   margin-right: auto;
@@ -225,13 +231,12 @@ i a.navbar-item:focus {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 2.0rem;
+  grid-row-gap: 2.0rem;
 }
 
 .experiments-div {
   width: 45%;
-  margin: 1.0rem;
 }
 
 .experiments-link {
@@ -347,6 +352,37 @@ i a.navbar-item:focus {
 .about-text:hover {
   transform: translate(0.625rem, 0.625rem);
   box-shadow: none;
+}
+
+/* communal elemenet styling */
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.0rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  align-items: center;
+  grid-row-gap: 0.5rem;
+}
+
+.main-header-title {
+  width: 100%;
+  margin-top: 0.0rem;
+  margin-bottom: -0.5rem;
+  font-family: "Rubik";
+  font-size: 5.0rem;
+  line-height: 5.0rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-header-text {
+  font-size: 1.375rem;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
 }
 
 /* WORK PAGE CONTENT */
@@ -506,6 +542,26 @@ i a.navbar-item:focus {
     text-align: center;
   }
 
+  .main-header {
+    margin-top: 1.0rem;
+    margin-bottom: 0.5rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main-header-title {
+    font-size: 4.0rem;
+    line-height: 4.0rem;
+  }
+  
+  .main-header-text {
+    font-size: 1.375rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+  }
+  
   /* EXPERIMENTS STYLING */
   .experiments-main {
     display: flex;
@@ -577,6 +633,12 @@ i a.navbar-item:focus {
     box-shadow: 20px 20px #f6d95c;
   }
 
+  /* communal page elements styling*/
+
+  .main-header-title {
+    font-size: 4.0rem;
+  }
+
   /* WORKS STYLING */
 
   .work-title {
@@ -634,6 +696,24 @@ i a.navbar-item:focus {
     margin: 0.25rem;
     padding: 0.5rem;
     box-shadow: 0.25rem 0.25rem;
+  }
+
+  .main-header {
+    margin-top: 0.0rem;
+    margin-bottom: -0.5rem;
+    width: 100%;
+  }
+
+  .main-header-title {
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+  }
+  
+  .main-header-text {
+    font-size: 1.0rem;
+    line-height: 1.0rem;
+    font-weight: 400;
+    margin: 0;
   }
 
   /* PROJECT STYLING */
