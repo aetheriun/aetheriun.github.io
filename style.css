@@ -611,6 +611,7 @@ i a.navbar-item:focus {
 
   .page-logo-text {
     text-align: center;
+    text-shadow: 0.3125rem 0.3125rem #f7da5c;
   }
 
   .main-header {
@@ -776,8 +777,8 @@ i a.navbar-item:focus {
 
   /* HEADER STYLING */
   .page-logo-text {
+    text-shadow: 0.25rem 0.25rem #f7da5c;
     font-size: 2.25rem;
-
   }
 
   .navbar-item,
