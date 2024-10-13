@@ -189,13 +189,46 @@ i a.navbar-item:focus {
   width: 100%;
   height: 100%;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0;
 }
 
 .project-img {
   display: inline-block;
   width: 100%;
   height: 100%;
-  max-width: none;
+  margin-bottom: 0;
+}
+
+.project-tagline-div {
+  width: 100%;
+  margin-top: 0;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.project-tagline-text {
+  padding: 1.0rem;
+  text-align: center;
+  margin: 0;
+}
+
+.project-main .project-div:nth-of-type(odd) .project-link .project-tagline-div {
+  background-color: #f2d55c;
+  box-shadow: 20px 20px #3182f9;
+}
+
+.project-main .project-div:nth-of-type(even) .project-link .project-tagline-div {
+  background-color: #3182f9;
+  box-shadow: 20px 20px #f2d55c;
+}
+
+.project-div:nth-of-type(odd) .project-link .project-tagline-div .project-tagline-text {
+  color: #403F4C;
+}
+
+.project-div:nth-of-type(even) .project-link .project-tagline-div .project-tagline-text {
+  color: white;
 }
 
 .project-main .project-div:nth-of-type(odd) .project-link .project-img {
@@ -212,9 +245,10 @@ i a.navbar-item:focus {
   transform: translate(20px, 20px);
   box-shadow: none;
 }
-.project-main .project-div:hover .project-overlay {
+
+.project-main .project-div:hover .project-link .project-tagline-div {
   transform: translate(20px, 20px);
-  opacity: 1;
+  box-shadow: none;
 }
 
 /* EXPERIMENTS PAGE MAIN CONTENT STLYING */
@@ -242,6 +276,10 @@ i a.navbar-item:focus {
 .experiments-link {
   width: 100%;
   height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0;
 }
 
 .experiments-img {
@@ -249,25 +287,57 @@ i a.navbar-item:focus {
   height: 100%;
   max-width: none;
   aspect-ratio: 16/9;
+  margin-bottom: 0;
 }
 
-.experiments-main .experiments-div:nth-of-type(4n+1) .experiments-link .experiments-img {
-  box-shadow: 12px 12px 0 0 #3182f9;
+.experiments-tagline-div {
+  width: 100%;
+  margin-top: 0;
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
-.experiments-main .experiments-div:nth-of-type(4n+2) .experiments-link .experiments-img {
-  box-shadow: 12px 12px 0 0 #f6d95c;
-  transition: box-shadow 0.15s, transform 0.15s;
+.experiments-tagline-text {
+  padding: 1.0rem;
+  text-align: center;
+  margin: 0;
 }
 
-.experiments-main .experiments-div:nth-of-type(4n+3) .experiments-link .experiments-img {
-  box-shadow: 12px 12px 0 0 #f6d95c;
-  transition: box-shadow 0.15s, transform 0.15s;
+.experiments-main .experiments-div:nth-of-type(4n+1) .experiments-link .experiments-tagline-div,
+.experiments-main .experiments-div:nth-of-type(4n+4) .experiments-link .experiments-tagline-div {
+  background-color: #f2d55c;
+  box-shadow: 12px 12px #3182f9;
 }
 
+.experiments-main .experiments-div:nth-of-type(4n+2) .experiments-link .experiments-tagline-div,
+.experiments-main .experiments-div:nth-of-type(4n+3) .experiments-link .experiments-tagline-div {
+  background-color: #3182f9;
+  box-shadow: 12px 12px #f2d55c;
+}
+
+.experiments-div:nth-of-type(4n+1) .experiments-link .experiments-tagline-div .experiments-tagline-text,
+.experiments-div:nth-of-type(4n+4) .experiments-link .experiments-tagline-div .experiments-tagline-text  {
+  color: #403F4C;
+}
+
+.experiments-div:nth-of-type(4n+2) .experiments-link .experiments-tagline-div .experiments-tagline-text,
+.experiments-div:nth-of-type(4n+3) .experiments-link .experiments-tagline-div .experiments-tagline-text  {
+  color: white;
+}
+
+.experiments-main .experiments-div:hover .experiments-link .experiments-tagline-div {
+  transform: translate(12px, 12px);
+  box-shadow: none;
+}
+
+.experiments-main .experiments-div:nth-of-type(4n+1) .experiments-link .experiments-img,
 .experiments-main .experiments-div:nth-of-type(4n+4) .experiments-link .experiments-img {
   box-shadow: 12px 12px 0 0 #3182f9;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.experiments-main .experiments-div:nth-of-type(4n+2) .experiments-link .experiments-img,
+.experiments-main .experiments-div:nth-of-type(4n+3) .experiments-link .experiments-img {
+  box-shadow: 12px 12px 0 0 #f6d95c;
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
@@ -492,6 +562,7 @@ i a.navbar-item:focus {
 .work-image-div {
   width: 30%;
 }
+
 .work-image {
   transition: box-shadow 0.15s, transform 0.15s;
 }
@@ -505,12 +576,12 @@ i a.navbar-item:focus {
 }
 
 .work-image-div:nth-of-type(odd) .work-image,
-.work-image-portrait-div:nth-of-type(odd) .work-image-portrait{
+.work-image-portrait-div:nth-of-type(odd) .work-image-portrait {
   box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
 }
 
 .work-image-div:nth-of-type(even) .work-image,
-.work-image-portrait-div:nth-of-type(even) .work-image-portrait{
+.work-image-portrait-div:nth-of-type(even) .work-image-portrait {
   box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
 }
 
@@ -525,7 +596,7 @@ i a.navbar-item:focus {
 
 /* PAGE SPECIFIC TWEAKS*/
 .oceanbg {
-  background-image: url("assets/Ocean Explorer Thumbnail.png") ;
+  background-image: url("assets/Ocean Explorer Thumbnail.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -535,7 +606,7 @@ i a.navbar-item:focus {
   /* HEADER STYLING */
   header {
     flex-direction: column;
-    padding-bottom: 1.0rem;
+    padding-bottom: 1.5rem;
   }
 
   .page-logo-text {
@@ -554,14 +625,14 @@ i a.navbar-item:focus {
     font-size: 4.0rem;
     line-height: 4.0rem;
   }
-  
+
   .main-header-text {
     font-size: 1.375rem;
     line-height: 1.5rem;
     font-weight: 400;
     margin: 0;
   }
-  
+
   /* EXPERIMENTS STYLING */
   .experiments-main {
     display: flex;
@@ -600,6 +671,25 @@ i a.navbar-item:focus {
   .experiments-main .experiments-div:nth-of-type(even) .experiments-link .experiments-img {
     box-shadow: 20px 20px #f6d95c;
     transition: box-shadow 0.15s, transform 0.15s;
+  }
+
+  .experiments-main .experiments-div:nth-of-type(odd) .experiments-link .experiments-tagline-div {
+    background-color: #f2d55c;
+    box-shadow: 20px 20px #3182f9;
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+
+  .experiments-main .experiments-div:nth-of-type(even) .experiments-link .experiments-tagline-div {
+    background-color: #3180f6;
+    box-shadow: 20px 20px #f6d95c;
+    transition: box-shadow 0.15s, transform 0.15s;
+  }
+  .experiments-div:nth-of-type(odd) .experiments-link .experiments-tagline-div .experiments-tagline-text  {
+    color:#403F4C
+  }
+
+  .experiments-div:nth-of-type(even) .experiments-link .experiments-tagline-div .experiments-tagline-text {
+    color: white;
   }
 
   .experiments-main .experiments-div .experiments-link .experiments-img:hover {
@@ -666,12 +756,12 @@ i a.navbar-item:focus {
   }
 
   .work-image-div:nth-of-type(4n+1) .work-image,
-  .work-image-div:nth-of-type(4n+4) .work-image{
+  .work-image-div:nth-of-type(4n+4) .work-image {
     box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
   }
 
   .work-image-div:nth-of-type(4n+2) .work-image,
-  .work-image-div:nth-of-type(4n+3) .work-image{
+  .work-image-div:nth-of-type(4n+3) .work-image {
     box-shadow: 1.0rem 1.0rem 0 0 #3182f9;
   }
 
@@ -708,7 +798,7 @@ i a.navbar-item:focus {
     font-size: 2.25rem;
     line-height: 2.25rem;
   }
-  
+
   .main-header-text {
     font-size: 1.0rem;
     line-height: 1.0rem;
@@ -726,6 +816,13 @@ i a.navbar-item:focus {
     width: 90%;
   }
 
+  .project-tagline-text {
+    font-size: 1.0rem;
+    line-height: 1.0rem;
+    font-weight: 400;
+    padding: 0.5rem;
+  }
+
   .project-main .project-div:nth-of-type(odd) .project-link .project-img {
     box-shadow: 0.5rem 0.5rem #3182f9;
   }
@@ -734,7 +831,20 @@ i a.navbar-item:focus {
     box-shadow: 0.5rem 0.5rem #f6d95c;
   }
 
-  .project-main .project-div .project-link .project-img:hover {
+  .project-main .project-div:hover .project-link .project-img {
+    transform: translate(0.5rem, 0.5rem);
+    box-shadow: none;
+  }
+
+  .project-main .project-div:nth-of-type(odd) .project-link .project-tagline-div {
+    box-shadow: 0.5rem 0.5rem #3182f9;
+  }
+
+  .project-main .project-div:nth-of-type(even) .project-link .project-tagline-div {
+    box-shadow: 0.5rem 0.5rem #f6d95c;
+  }
+
+  .project-main .project-div:hover .project-link .project-tagline-div {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: none;
   }
@@ -749,6 +859,13 @@ i a.navbar-item:focus {
     width: 90%;
   }
 
+  .experiments-tagline-text {
+    font-size: 1.0rem;
+    line-height: 1.0rem;
+    font-weight: 400;
+    padding: 0.5rem;
+  }
+
   .experiments-main .experiments-div:nth-of-type(odd) .experiments-link .experiments-img {
     box-shadow: 0.5rem 0.5rem #3182f9;
   }
@@ -757,7 +874,20 @@ i a.navbar-item:focus {
     box-shadow: 0.5rem 0.5rem #f6d95c;
   }
 
-  .experiments-main .experiments-div .experiments-link .experiments-img:hover {
+  .experiments-main .experiments-div:hover .experiments-link .experiments-img {
+    transform: translate(0.5rem, 0.5rem);
+    box-shadow: none;
+  }
+
+  .experiments-main .experiments-div:nth-of-type(odd) .experiments-link .experiments-tagline-div {
+    box-shadow: 0.5rem 0.5rem #3182f9;
+  }
+
+  .experiments-main .experiments-div:nth-of-type(even) .experiments-link .experiments-tagline-div {
+    box-shadow: 0.5rem 0.5rem #f6d95c;
+  }
+
+  .experiments-main .experiments-div:hover .experiments-link .experiments-tagline-div {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: none;
   }
@@ -809,7 +939,8 @@ i a.navbar-item:focus {
 
   .work-title {
     font-size: 2.25rem;
-    line-height: 2.25rem;;
+    line-height: 2.25rem;
+    ;
   }
 
   .work-heroimage {
@@ -852,15 +983,15 @@ i a.navbar-item:focus {
   }
 
   .work-image-div:nth-of-type(even) .work-image,
-  .work-image-portrait-div:nth-of-type(even) .work-image-portrait{
+  .work-image-portrait-div:nth-of-type(even) .work-image-portrait {
     box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
   }
 
   .work-header-linkbox:hover,
   .work-heroimage-div:hover .work-heroimage,
-  .work-description:hover,
+  .work-description-div:hover .work-description,
   .work-image-div:hover .work-image,
-  .work-image-portrait-div:hover .work-image-portrait{
+  .work-image-portrait-div:hover .work-image-portrait {
     transform: translate(0.5rem, 0.5rem);
     box-shadow: none;
   }
