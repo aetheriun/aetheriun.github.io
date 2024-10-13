@@ -325,7 +325,6 @@ i a.navbar-item:focus {
   justify-content: center;
   align-items: center;
   grid-column-gap: 2.0rem;
-  grid-row-gap: 2.0rem;
   background-color: #3182f9;
   box-shadow: 12px 12px 0 0 #f2d55c;
   transition: box-shadow 0.15s, transform 0.15s;
@@ -401,11 +400,22 @@ i a.navbar-item:focus {
   grid-row-gap: 2.0rem;
 }
 
+.work-heroimage-div {
+  width: 100%;
+  height: auto;
+}
+
 .work-heroimage {
   aspect-ratio: 16/9;
+  height: auto;
   width: 100%;
   box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
   transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.work-description-div {
+  width: 100%;
+  height: auto;
 }
 
 .work-description {
@@ -443,32 +453,45 @@ i a.navbar-item:focus {
   display: none;
 }
 
-.work-image {
+.work-image-div {
   width: 30%;
+}
+.work-image {
   transition: box-shadow 0.15s, transform 0.15s;
 }
-.work-image-portrait {
+
+.work-image-portrait-div {
   width: 45%;
+}
+
+.work-image-portrait {
   transition: box-shadow 0.15s, transform 0.15s;
 }
 
-.work-image:nth-of-type(odd),
-.work-image-portrait:nth-of-type(odd) {
-  box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
-}
-
-.work-image:nth-of-type(even),
-.work-image-portrait:nth-of-type(even) {
+.work-image-div:nth-of-type(odd) .work-image,
+.work-image-portrait-div:nth-of-type(odd) .work-image-portrait{
   box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
 }
 
+.work-image-div:nth-of-type(even) .work-image,
+.work-image-portrait-div:nth-of-type(even) .work-image-portrait{
+  box-shadow: 1.0rem 1.0rem 0 0 #3180f6;
+}
+
 .work-header-linkbox:hover,
-.work-heroimage:hover,
-.work-description:hover,
-.work-image:hover,
-.work-image-portrait:hover {
+.work-heroimage-div:hover .work-heroimage,
+.work-description-div:hover .work-description,
+.work-image-div:hover .work-image,
+.work-image-portrait-div:hover .work-image-portrait {
   transform: translate(1.0rem, 1.0rem);
   box-shadow: none;
+}
+
+/* PAGE SPECIFIC TWEAKS*/
+.oceanbg {
+  background-image: url("assets/Ocean Explorer Thumbnail.png") ;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media screen and (max-width : 990px) {
@@ -568,7 +591,7 @@ i a.navbar-item:focus {
     margin-bottom: 0rem;
   }
 
-  .work-image {
+  .work-image-div {
     width: 47%;
   }
 
@@ -580,17 +603,17 @@ i a.navbar-item:focus {
     display: inline;
   }
 
-  .work-image:nth-of-type(4n+1),
-  .work-image:nth-of-type(4n+4) {
+  .work-image-div:nth-of-type(4n+1) .work-image,
+  .work-image-div:nth-of-type(4n+4) .work-image{
     box-shadow: 1.0rem 1.0rem 0 0 #f3d65c;
   }
 
-  .work-image:nth-of-type(4n+2),
-  .work-image:nth-of-type(4n+3) {
+  .work-image-div:nth-of-type(4n+2) .work-image,
+  .work-image-div:nth-of-type(4n+3) .work-image{
     box-shadow: 1.0rem 1.0rem 0 0 #3182f9;
   }
 
-  .work-image:hover {
+  .work-image-div:hover .work-image {
     transform: translate(1.0rem, 1.0rem);
     box-shadow: none;
   }
@@ -685,6 +708,8 @@ i a.navbar-item:focus {
   }
 
   .about-link-box {
+    padding: 0.5rem;
+    grid-column-gap: 1.0rem;
     box-shadow: 0.5rem 0.5rem #f6d95c;
   }
 
@@ -733,29 +758,29 @@ i a.navbar-item:focus {
     grid-row-gap: 1.5rem;
   }
 
-  .work-image {
+  .work-image-div {
     width: 100%;
   }
 
-  .work-image-portrait {
+  .work-image-portrait-div {
     width: 100%;
   }
 
-  .work-image:nth-of-type(odd),
-  .work-image-portrait:nth-of-type(odd) {
-    box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
-  }
-
-  .work-image:nth-of-type(even),
-  .work-image-portrait:nth-of-type(even) {
+  .work-image-div:nth-of-type(odd) .work-image,
+  .work-image-portrait-div:nth-of-type(odd) .work-image-portrait {
     box-shadow: 0.5rem 0.5rem 0 0 #f3d65c;
   }
 
+  .work-image-div:nth-of-type(even) .work-image,
+  .work-image-portrait-div:nth-of-type(even) .work-image-portrait{
+    box-shadow: 0.5rem 0.5rem 0 0 #3180f6;
+  }
+
   .work-header-linkbox:hover,
-  .work-heroimage:hover,
+  .work-heroimage-div:hover .work-heroimage,
   .work-description:hover,
-  .work-image:hover,
-  .work-image-portrait:hover  {
+  .work-image-div:hover .work-image,
+  .work-image-portrait-div:hover .work-image-portrait{
     transform: translate(0.5rem, 0.5rem);
     box-shadow: none;
   }
