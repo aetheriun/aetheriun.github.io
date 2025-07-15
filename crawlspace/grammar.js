@@ -3,35 +3,34 @@ var source =
   {
     origin: ["#phrases#"],
     phrases: [
-      "#lover_touch# makes my #body# #reaction#",
-      "my #software_body# cannot #compute# #lover_touch#",
+        "#lover# is #etched# onto my #mind#",
+        "my #material# #heart# #heartbeat# inside my #body#",
+        "#lover# #flush# through the #veins# of my #body#",
+        "#longing# #flush# through my #veins#",
     ],
-    
-    
-    body:["#flesh_body#","#machine_body#","#software_body#"],
-    flesh_body: ["heart","lungs","veins","synapses","chest","stomach","face","cheeks"],
-    machine_body: ["sockets","wires","implants","ports","hardware","chasis","databank","assembly"],
+
     software_body: ["data","instillation","programming","software","packets","code","binary","protocol"],
     
-    reaction: ["#flesh_reaction#","#machine_reaction#"],
-    flesh_reaction: ["throb","rush","tingle","rush","flush","burn","race","spasam"],
-    machine_reaction: ["whir","click","murmur","buzz","crackle","fizzle"],
-    
-    lover_touch: ["their touch","their presence","their voice"],
+    lover: ["their touch","their presence","their voice","their smile","their eyes","their laugh","their face"],
     
     compute: ["compute","comprehend","understand","analyze"],
 
-    materials: ["plastic","silicon","copper","cobalt","silver","titanium","platinum","steel","glass"],
+    material: ["plastic","silicon","copper","cobalt","silver","titanium","platinum","steel","glass"],
 
-    heartbeat: ["beat","throb","thunder","pulse"],
-    flush: ["flush","burn","tingle"],
-    stopping: ["jolt","crunch","spurt","stutter"],
+    heartbeat: ["beats","throbs","thunders","pulses","races"],
+    flush: ["flushes","burns","tingles","rushes", "courses"],
+    stopping: ["jolt","crunch","spurt","stutter","spasam"],
+    mechanical_sound: ["whir","click","murmur","buzz","crackle","fizzle"],
 
-    veins: ["veins","arteries","wires","coils","cables","ribbons","synapses"],
+    veins: ["veins","arteries","wires","coils","cables","ribbons","synapses","circuits"],
     lungs: ["lungs","fans","motors"],
-    brain: ["brain","motherboard","processor","CPU","database"],
-    body: ["body","chest","chasis","core","mainframe"],
+    brain: ["brain","motherboard","processor","CPU"],
+    heart: ["heart","core","motor",],
+    body: ["body","chest","chasis","frame","shell",],
     face: ["face","cheeks","skin","casing","surface","shell"],
 
-    mind : ["mind","memory","databanks","archives"],
+    mind : ["mind","memory","databanks","archive","instillation","protocol","software","code"],
+
+    etched: ["etched","burned","imprinted",],
+    longing: ["longing","desire","hope"],
   };
