@@ -1,10 +1,12 @@
-function Message() {
+function Message(scl) {
+    this.scl = scl;
     this.grammar = tracery.createGrammar(source);
     this.prev = "";
     this.message = "";
     this.pos = createVector(0, 0);
     //this.font = font;
-    this.fontSize = 24;
+    this.fontSize = this.scl * 2;
+    messageWidth = this.scl * 32;
   
     this.GenerateMessage = function () {
       textFont("Courier Prime");
@@ -18,41 +20,48 @@ function Message() {
       this.prev = this.message;
   
       this.pos = createVector(
-        random(width / 6, (width/3) * 2),
-        random(height / 6, (height / 3) * 2)
+        random(this.scl * 5, width - messageWidth),
+        random(this.scl * 15,height - messageWidth)
       );
     };
   
     this.DisplayMessage = function () {
       //Shadow
       fill(winShadow);
-      rect(this.pos.x+10,this.pos.y-40,300,140,10);
+      rect(this.pos.x+this.scl,this.pos.y-(this.scl * 4),this.scl * 30,this.scl * 14,this.scl);
       
       //Toolbar
+      strokeWeight(5);
+      stroke(barCol2);
       fill(barCol2);
-      rect(this.pos.x,this.pos.y-50,300,25,10,10,0,0);
+      rect(this.pos.x,this.pos.y-(this.scl * 5),this.scl * 30,this.scl * 2.5,this.scl,this.scl,0,0);
+      noStroke();
       
       //Buttons
       fill(btnCol1);
-      rect(this.pos.x+5,this.pos.y-45,15,15,5);
+      rect(this.pos.x+ (this.scl/2),this.pos.y-(this.scl * 4.5),this.scl * 1.5,this.scl *1.5,this.scl/2);
       fill(btnCol2);
-      rect(this.pos.x+25,this.pos.y-45,15,15,5);
+      rect(this.pos.x+(this.scl * 2.5),this.pos.y-(this.scl * 4.5),this.scl *1.5,this.scl * 1.5,this.scl/2);
       fill(btnCol3);
-      rect(this.pos.x+45,this.pos.y-45,15,15,5);
+      rect(this.pos.x+(this.scl * 4.5),this.pos.y-(this.scl * 4.5),this.scl * 1.5,this.scl * 1.5,this.scl/2);
       
       //Window
+      strokeWeight(5);
+      stroke(barCol2);
       fill(255);
-      rect(this.pos.x,this.pos.y-25,300,115,0,0,5,5);
+      rect(this.pos.x,this.pos.y-(this.scl * 2.5),this.scl * 30,this.scl * 11.5,0,0,this.scl/2,this.scl/2);
+      noStroke();
       
       //Text
       fill(0);
-      text(this.message, this.pos.x, this.pos.y, 300, 100);
+      text(this.message, this.pos.x, this.pos.y, this.scl * 30, this.scl * 10);
     };
   }
   
-  function Wallpaper() {
+  function Wallpaper(scl) {
     ellipseMode(CENTER);
     let gridScl = 30;
+    let drawScl = scl;
     background(bgCol);
     for (var y = -gridScl/4; y < height + gridScl; y += gridScl) {
       for (var x = -gridScl/4; x < width + gridScl; x += gridScl) {
@@ -62,12 +71,12 @@ function Message() {
       }
     }
     fill(barCol2);
-    rect(0, height - 35, width, 35);
+    rect(0, height - drawScl * 3.5, width, drawScl * 3.5);
     fill(barCol1);
-    rect(0, height - 35, width / 6, 35);
-    fill(255);
-    rect(width-27.5,height-27.5,20,20);
-    rect(width-57.5,height-27.5,20,20);
-    rect(width-87.5,height-27.5,20,20);
+    rect(0, height - drawScl * 3.5, width / 6, drawScl * 3.5);
+    fill(52, 102,255);
+    rect(width-(drawScl * 2.75),height-(drawScl * 2.75),drawScl * 2,drawScl * 2);
+    rect(width-(drawScl * 5.75),height-(drawScl * 2.75),drawScl * 2,drawScl * 2);
+    rect(width-(drawScl * 8.75),height-(drawScl * 2.75),drawScl * 2,drawScl * 2);
     ellipseMode(CORNER);
   }
