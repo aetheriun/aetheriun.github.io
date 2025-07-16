@@ -6,10 +6,15 @@ var source =
         "#lover# is #etched# onto my #mind#",
         "my #material# #heart# #heartbeat# inside my #body#",
         "#lover# #flush# through the #veins# of my #body#",
-        "#longing# #flush# through my #veins#",
+        "#longing# #flush# through the #veins# of my #body#",
+        "my #face# #flush# with #longing#",
+        "a #longing# i didn't know I could feel",
+        "my #software# cannot #compute# this #longing#",
+        "#lover# makes my #body_all# #reactions_all#",
+        "my #software# cannot #compute# #lover#",
     ],
 
-    software_body: ["data","instillation","programming","software","packets","code","binary","protocol"],
+    software: ["data","instillation","programming","software","packets","code","binary","protocol"],
     
     lover: ["their touch","their presence","their voice","their smile","their eyes","their laugh","their face"],
     
@@ -32,5 +37,7 @@ var source =
     mind : ["mind","memory","databanks","archive","instillation","protocol","software","code"],
 
     etched: ["etched","burned","imprinted",],
-    longing: ["longing","desire","hope"],
+    longing: ["longing","desire","need","want","craving","yearning","pining"],
+    body_all: ["#veins#","#lungs#","#brain#","#heart#","#body#","#face#"],
+    reactions_all: ["#heartbeat#","#flush#","#stopping#","#mechanical_sound#"],
   };
